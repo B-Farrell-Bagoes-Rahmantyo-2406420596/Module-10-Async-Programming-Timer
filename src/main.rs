@@ -104,6 +104,19 @@ fn main() {
         TimerFuture::new(Duration::new(2, 0)).await;
         println!("Rekkin's Machine: done!");
     });
+    spawner.spawn(async {
+        println!("Rekkin's Machine: howdy!2");
+        // Wait for our timer future to complete after two seconds.
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Rekkin's Machine: done!2");
+    });
+    spawner.spawn(async {
+        println!("Rekkin's Machine: howdy!3");
+        // Wait for our timer future to complete after two seconds.
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Rekkin's Machine: done!3");
+    });
+    
 
     println!("Rekkin's Machine: I have no mouth and I must Scream.");
     // Drop the spawner so that our executor knows it is finished and won't
