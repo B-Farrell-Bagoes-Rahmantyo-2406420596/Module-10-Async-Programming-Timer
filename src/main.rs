@@ -105,6 +105,7 @@ fn main() {
         println!("Rekkin's Machine: done!");
     });
 
+    println!("Rekkin's Machine: I have no mouth and I must Scream.");
     // Drop the spawner so that our executor knows it is finished and won't
     // receive more incoming tasks to run.
     drop(spawner);
